@@ -19,6 +19,7 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         python-version: ["3.10", "3.11", "3.12", "3.13"]
+        nestle-version: ["0.2.0", "0.2.1"]
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -28,10 +29,10 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
         cache: 'pip'
-    - name: Install dependencies
+    - name: Install dependencies - nestle ${{ matrix.nestle-version }}
       run: |
         python -m pip install --upgrade pip
-        pip install .[test]
+        pip install .[test] nestle==${{ matrix.nestle-version }}
     - name: Test with pytest
       run: |
         python -m pytest
