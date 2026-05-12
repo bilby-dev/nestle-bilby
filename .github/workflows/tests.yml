@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   unittests:
-    name: Unit tests - Python ${{ matrix.python-version }} (${{ matrix.os }})
+    name: Unit tests - Python ${{ matrix.python-version }} (${{ matrix.os }}) - nestle ${{ matrix.nestle-version }}
 
     strategy:
       fail-fast: false
