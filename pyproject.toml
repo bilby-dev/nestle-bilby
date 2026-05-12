@@ -20,7 +20,7 @@ classifiers = [
 ]
 dependencies = [
     "bilby>=2.3.0",
-    "nestle>=0.2.1",
+    "nestle>=0.2.0",
 ]
 
 dynamic = ["version"]
