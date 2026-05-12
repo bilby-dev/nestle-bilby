@@ -72,6 +72,11 @@ class Nestle(NestedSampler):
         """
         import nestle
 
+        if nestle.__version__ == "0.2.0":
+            # This is a very ugly hack to support numpy>=1.24
+            nestle.np.float = float
+            nestle.np.int = int
+
         if self.npool and self.npool > 1:
             logger.warning(
                 "Nestle does not support parallelization, ignoring npool > 1"
