@@ -18,7 +18,3 @@ or conda
 ```
 conda install conda-forge:nestle-bilby
 ```
-
-## Changes compared to the original bilby interface
-
-- Dropped support for `nestle<0.2.1`
